@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://bgdm32nl1b7tx"]
+
+[ext_resource type="Script" path="res://Scripts/Player.gd" id="1_51asd"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_ddj6i"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_jd4pn"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_vqlde"]
+height = 1.2
+
+[node name="Player" type="CharacterBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.18307, 0)
+script = ExtResource("1_51asd")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("CapsuleMesh_ddj6i")
+
+[node name="standing_collision_shape" type="CollisionShape3D" parent="."]
+shape = SubResource("CapsuleShape3D_jd4pn")
+
+[node name="crouching_collision_shape" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.403126, 0)
+shape = SubResource("CapsuleShape3D_vqlde")
+disabled = true
+
+[node name="Head" type="Node3D" parent="."]
+
+[node name="Camera3D" type="Camera3D" parent="Head"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.665048, 0)
