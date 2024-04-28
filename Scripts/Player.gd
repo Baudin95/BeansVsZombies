@@ -24,7 +24,7 @@ var bullet = load("res://Scenes/Bullet.tscn")
 var instance
 
 #crouch
-var crouching_depth = -0.5
+var crouching_depth = -0.3
 
 
 @onready var head = $Head
@@ -60,7 +60,7 @@ func _physics_process(delta):
 		crouching_collision_shape.disabled = false
 	else:
 		standing_collision_shape.disabled = false
-		standing_collision_shape.disabled = true
+		crouching_collision_shape.disabled = true
 		head.position.y = lerp(head.position.y, 0.0, delta * 7.0)
 		if Input.is_action_pressed("sprint"):
 			speed = SPRINT_SPEED
