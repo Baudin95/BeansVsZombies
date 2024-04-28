@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cge8o6rnuk8mu"
+path="res://.godot/imported/AssaultRifle_01.obj-84bc527b07982b7859c16a52b2010fbf.mesh"
+
+[deps]
+
+files=["res://.godot/imported/AssaultRifle_01.obj-84bc527b07982b7859c16a52b2010fbf.mesh"]
+
+source_file="res://Assets/Models/AssaultRifle_01.obj"
+dest_files=["res://.godot/imported/AssaultRifle_01.obj-84bc527b07982b7859c16a52b2010fbf.mesh", "res://.godot/imported/AssaultRifle_01.obj-84bc527b07982b7859c16a52b2010fbf.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false
